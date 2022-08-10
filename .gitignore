@@ -19,3 +19,7 @@ bazel-*
 
 # PyCharm directories
 .idea*
+
+# Self-used complement tool
+.cache
+compile_commands.json
