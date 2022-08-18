@@ -20,6 +20,11 @@ bazel-*
 # PyCharm directories
 .idea*
 
-# Self-used complement tool
+# Caches
 .cache
+
+# Compile base
 compile_commands.json
+
+# Vim temperory file
+*.swp
