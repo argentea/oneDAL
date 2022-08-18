@@ -19,3 +19,6 @@ bazel-*
 
 # PyCharm directories
 .idea*
+
+*.swp
+compile_commands.json
