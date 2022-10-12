@@ -25,14 +25,18 @@ namespace v1 {
 
 template <typename... Args>
 auto train(Args&&... args) {
-    return dal::detail::train_dispatch(std::forward<Args>(args)...);
+	std::cout << "false keans run\n";
+//    return dal::detail::train_dispatch(std::forward<Args>(args)...);
+	return 0;
 }
 
 #ifdef ONEDAL_DATA_PARALLEL
 template <typename... Args>
 auto train(sycl::queue& queue, Args&&... args) {
-    return dal::detail::train_dispatch(detail::data_parallel_policy{ queue },
-                                       std::forward<Args>(args)...);
+	cout << "right keans run\n";
+    //return dal::detail::train_dispatch(detail::data_parallel_policy{ queue },
+     //                                  std::forward<Args>(args)...);
+	return 0;
 }
 #endif
 

@@ -77,7 +77,7 @@ struct train_ops {
 
     template <typename Context>
     auto operator()(const Context& ctx, const Descriptor& desc, const input_t& input) const {
-        check_preconditions(desc, input);
+ //       check_preconditions(desc, input);
         const auto result =
             train_ops_dispatcher<Context, float_t, method_t, task_t>()(ctx, desc, input);
         check_postconditions(desc, input, result);
